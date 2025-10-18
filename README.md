@@ -6,39 +6,39 @@ Este repositorio contiene diseños y verificaciones de módulos desarrollados en
 
 ## 📁 Estructura del repositorio
 
-La organización del repositorio sigue una progresión por niveles:
+La organización del repositorio esta compuesta por  tres niveles y miniproyectos:
 
 - **📂 Básico**  
   Ejercicios introductorios con los fundamentos de los sistemas digitales. Incluye compuertas lógicas, multiplexores, codificadores, etc.
 
 - **📂 Medio**  
-  Aplicación de conceptos vistos en el nivel básico. Se abordan módulos más complejos como **divisores de frecuencia**, **flip-flops** y **máquinas de estados finitos (FSM)**.
+  Aplicación de conceptos vistos en el nivel básico. Se implementan módulos más complejos como **divisores de frecuencia**, **flip-flops** y **máquinas de estados finitos (FSM)**.
 
 - **📂 Avanzado**  
-  Implementación de **protocolos de comunicación** como UART, SPI, I2C, etc.
+  Implementación de **protocolos de comunicación**.
 
 - **📂 Miniproyectos**  
-  Aplicaciones prácticas integrando módulos y conceptos de los niveles anteriores.
+  Aplicaciones prácticas integrando los módulos y conceptos de los niveles anteriores.
 
 ---
 
 ## 🧪 Simulación
 
-Las simulaciones fueron realizadas con:
+Antes de bajar el diseño al FPGA este fue puesto a prueba mediante simulación y se utilziaron los siguientes softwares.
 
-- **Icarus Verilog (`iverilog`)** – Para compilar los módulos y testbenches.
-- **GTKWave (`gtkwave`)** – Para visualizar las señales simuladas en forma de onda (`.vcd`).
+- **Icarus Verilog (`iverilog`)** – Compilar los módulos y testbenches.
+- **GTKWave (`gtkwave`)** – Visualizar las señales simuladas en forma de onda (`.vcd`).
 
-### 💻 Instrucciones básicas de compilación y simulación
+### 💻 Comandos básicos para compilación y simulación
 
 ```bash
 # Compilar con Icarus Verilog
-iverilog -o output.vvp modulo.v testbench.v
+iverilog -o ejemplo.vvp modulo.v testbench.v
 
-# Ejecutar simulación
+# Ejecutar simulación 
 vvp output.vvp
 
-# Ver ondas con GTKWave
+# Visualizar señales en forma de ondas con GTKWave
 gtkwave Testbench.vcd
 
 
