@@ -1,29 +1,44 @@
-# Verilog
-El presente repostorio contiene diseños y verificaciones de módulos desarrollados en verilog, donde estos mismos han sido
-puestos a prueba tanto en simulación como en físico.
+# 💡 Verilog – Diseños y Simulaciones
 
-## 📁 Estructura del repositorio 
-La organización del repositorio es la siguiente:
+Este repositorio contiene diseños y verificaciones de módulos desarrollados en Verilog. Cada uno de ellos ha sido probado mediante simulación, y varios han sido implementados físicamente en una FPGA **DE10-Lite**.
 
-- **Basico:** Aquí partemos con ejercicios básicos con la teoria fundamental de los sitemas digiatales.
-- **Medio:** Los ejercicios en este nivel aplican la teoria vista en el nivel básico y empiezan a tener mas complejidad los    ejercicios como fsm, divisor de frecuencia, fsm.
-- **Avanzado:** Desarrollo de protocolos de comunicación.
-- **Miniproyectos:** Aplicaciones prácticas de los niveles antes mencionados.
+---
 
-## 🧪 Pruebas de simulación
-Para el diseño y verificación de los módulos desarrollados se utilizarón los softwares iverilog y gtkwave.
-- **Iverilog:** Compilar.
-- **Gtkwave:** Visualizar señales en forma de onda.
+## 📁 Estructura del repositorio
 
-## ⚙️ Pruebas en hardware
-Los módulos presentados han sido puestos a prueba en físico en un FPGA DE10-Lite.
+La organización del repositorio sigue una progresión por niveles:
 
-## 📚 Conceptos básicos de verilog
+- **📂 Básico**  
+  Ejercicios introductorios con los fundamentos de los sistemas digitales. Incluye compuertas lógicas, multiplexores, codificadores, etc.
 
-- **module:** Es la unidad donde se implementa el funcionamiento del circuito "Es como el circuito integrado ".
-- **puertos:** Entradas y salidas del módulo.
-- **endmodule:** Especifica fin del módulo.
+- **📂 Medio**  
+  Aplicación de conceptos vistos en el nivel básico. Se abordan módulos más complejos como **divisores de frecuencia**, **flip-flops** y **máquinas de estados finitos (FSM)**.
 
-## 📚 elementos del testbench
-- **Instanciación:** Manda llamar a módulos externos al que se esta implementando.
-- **Mapeo:** Conectar señales
+- **📂 Avanzado**  
+  Implementación de **protocolos de comunicación** como UART, SPI, I2C, etc.
+
+- **📂 Miniproyectos**  
+  Aplicaciones prácticas integrando módulos y conceptos de los niveles anteriores.
+
+---
+
+## 🧪 Simulación
+
+Las simulaciones fueron realizadas con:
+
+- **Icarus Verilog (`iverilog`)** – Para compilar los módulos y testbenches.
+- **GTKWave (`gtkwave`)** – Para visualizar las señales simuladas en forma de onda (`.vcd`).
+
+### 💻 Instrucciones básicas de compilación y simulación
+
+```bash
+# Compilar con Icarus Verilog
+iverilog -o output.vvp modulo.v testbench.v
+
+# Ejecutar simulación
+vvp output.vvp
+
+# Ver ondas con GTKWave
+gtkwave Testbench.vcd
+
+
