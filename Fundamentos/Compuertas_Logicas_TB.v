@@ -11,18 +11,18 @@
 module Compuertas_Logicas_TB;
 	//Declaración de señales del testbench acorde a las entradas y salidas del módulo a verificar
 	//Reg para entradas
-	reg X;
-	reg Y;
+	reg X_TB;
+	reg Y_TB;
 	//Wire para salidas
-	wire Sand;
-	wire Sor;
-	wire Snot;
-	wire Snand;
-	wire Sxor;
-	wire Snor;
+	wire Sand_TB;
+	wire Sor_TB;
+	wire Snot_TB;
+	wire Snand_TB;
+	wire Sxor_TB;
+	wire Snor_TB;
 	
 	//Instanciación al módulo principal y mapeo de señales
-	Compuertas_Logicas DUT(.X(X), .Y(Y), .Sand(Sand), .Sor(Sor), .Snot(Snot), .Snand(Snand), .Sxor(Sxor), .Snor(Snor));
+	Compuertas_Logicas DUT(.X(X_TB), .Y(Y_TB), .Sand(Sand_TB), .Sor(Sor_TB), .Snot(Snot_TB), .Snand(Snand_TB), .Sxor(Sxor_TB), .Snor(Snor_TB));
 	
 	//Estimulos
 	initial begin 
@@ -33,21 +33,21 @@ module Compuertas_Logicas_TB;
 		
 		//Mensaje en consola
 		$display("Iniciando simulacion...");
-        $monitor("Tiempo=%0t | X=%b | Y=%b | AND=%b | OR=%b | NOT=%b NAND=%b | XOR=%b |NOR=%b" 	, //Para valores 
-        $time, X, Y, Sand, Sor, Snot, Snand, Sxor, Snor); //Tiempo
+        $monitor("Tiempo=%0t | X=%b | Y=%b | AND=%b | OR=%b | NOT=%b NAND=%b | XOR=%b |NOR=%b", //Para valores 
+        $time, X_TB, Y_TB, Sand_TB, Sor_TB, Snot_TB, Snand_TB, Sxor_TB, Snor_TB); //Tiempo
 	
-		// Casos de prueba
-		X = 1'b0;
-		Y = 1'b0;
+		// Estimulos
+		X_TB = 1'b0;
+		Y_TB = 1'b0;
 		#10; 
-		X = 1'b1;
-		Y = 1'b0;
+		X_TB = 1'b1;
+		Y_TB = 1'b0;
 		#10;
-		X = 1'b0;
-		Y = 1'b1;
+		X_TB = 1'b0;
+		Y_TB = 1'b1;
 		#10;
-		X = 1'b1;
-		Y = 1'b1;
+		X_TB = 1'b1;
+		Y_TB = 1'b1;
 		#10;
 		
 		$display("Fin de simulacion."); 

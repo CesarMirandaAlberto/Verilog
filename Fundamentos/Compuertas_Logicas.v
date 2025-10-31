@@ -6,12 +6,12 @@
 	que almacenará (ej  Sand = Salida And.
 	
 */
-//Definición del módulo
+//Definición del módulo y su lista de puertos de Entradas(input) Salidas(output)
 module Compuertas_Logicas(
-	//Entradas de un bit
+
 	input X,
 	input Y,
-	// Salidas de tipo wire de un bit
+
 	output wire Sand,
 	output wire Sor,
 	output wire Snot,
