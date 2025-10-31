@@ -33,10 +33,10 @@ module Compuertas_Logicas_TB;
 		
 		//Mensaje en consola
 		$display("Iniciando simulacion...");
-        $monitor("Tiempo=%0t | X=%b | Y=%b | AND=%b | OR=%b | NOT=%b NAND=%b | XOR=%b |NOR=%b", //Para valores 
+        $monitor("Tiempo=%0t | X=%b | Y=%b | AND=%b | OR=%b | NOT=%b NAND=%b | XOR=%b |NOR=%b" 	, //Para valores 
         $time, X_TB, Y_TB, Sand_TB, Sor_TB, Snot_TB, Snand_TB, Sxor_TB, Snor_TB); //Tiempo
 	
-		// Estimulos
+		// Casos de prueba
 		X_TB = 1'b0;
 		Y_TB = 1'b0;
 		#10; 
