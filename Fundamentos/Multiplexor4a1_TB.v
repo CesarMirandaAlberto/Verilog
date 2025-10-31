@@ -12,15 +12,15 @@
 //Declaración del módulo
 module Multiplexor4a1_TB;
 	//lista de señales acorde a los puertos del módulo a verificar
-	reg [2:0]A;
-	reg [2:0]B;
-	reg [2:0]C; 
-	reg [2:0]D;
-	reg [2:0] Selector;
-	wire [2:0] Salida;
+	reg [2:0]A_TB;
+	reg [2:0]B_TB;
+	reg [2:0]C_TB; 
+	reg [2:0]D_TB;
+	reg [2:0] Selector_TB;
+	wire [2:0] Salida_TB;
 	
 	//instanciación
-	Multiplexor4a1 DUT(.A(A), .B(B), .C(C), .D(D), .Selector(Selector), .Salida(Salida));
+	Multiplexor4a1 DUT(.A(A_TB), .B(B_TB), .C(C_TB), .D(D_TB), .Selector(Selector_TB), .Salida(Salida_TB));
 	
 	initial begin
 		//Parametros para archivos de simulación
@@ -30,25 +30,25 @@ module Multiplexor4a1_TB;
 		//Texto en consola
 		$display("Iniciando simulación.....");
 		$monitor("Tiempo=%0t | A=%b | B=%b | C=%b | D=%b | Selector=%b | Salida=%b|",
-		$time, A, B, C, D, Selector, Salida);
+		$time, A_TB, B_TB, C_TB, D_TB, Selector_TB, Salida_TB);
 		
 		//Estimulos
-		A = 3'b001;
-		B = 3'b100;
-		C = 3'b101;
-		D = 3'b110;
+		A_TB = 3'b001;
+		B_TB = 3'b100;
+		C_TB = 3'b101;
+		D_TB = 3'b110;
 		
-		Selector = 3'b000;
+		Selector_TB = 3'b000;
 		#10; //Retardo
-		Selector = 3'b001;
+		Selector_TB = 3'b001;
 		#10;
-		Selector = 3'b010;
+		Selector_TB = 3'b010;
 		#10;
-		Selector = 3'b011;
+		Selector_TB = 3'b011;
 		#10;
-		Selector = 3'b100;
+		Selector_TB = 3'b100;
 		#10;
-		Selector = 3'b101;
+		Selector_TB = 3'b101;
 		#10;
 		
 		$display("Fin de la simulación..");
