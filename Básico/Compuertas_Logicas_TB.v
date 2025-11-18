@@ -3,17 +3,17 @@
 	El presente código verilog implementa el testbench del módulo de compuertas lógicas 
 	a fin de analizar el funcionamiento correcto del módulo.
 	NOTA: DUT es el nombre de la instanciación.
-	
+	reg para entradas
+	wire para salidas
 */
 `timescale 1ns/1ps // Escala de tiempo
 
 //Declaración del módulo
 module Compuertas_Logicas_TB;
 	//Declaración de señales del testbench acorde a las entradas y salidas del módulo a verificar
-	//Reg para entradas
+
 	reg X_TB;
 	reg Y_TB;
-	//Wire para salidas
 	wire Sand_TB;
 	wire Sor_TB;
 	wire Snot_TB;
@@ -52,5 +52,5 @@ module Compuertas_Logicas_TB;
 		
 		$display("Fin de simulacion."); 
 		$finish; 
-	end // Fin del comportamiento
+	end 
 endmodule // Fin del módulo
