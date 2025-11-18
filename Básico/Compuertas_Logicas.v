@@ -2,8 +2,8 @@
 		**** COMPUERTAS LOGICAS ****
 	El presente código verilog implementa las compuertas lógicas
 	utilizando asignamiento continuo.
-	Para cada compuera lógica esta establecida una salida S=Salida seguido de la compuerta
-	que almacenará (ej  Sand = Salida And.
+	Para cada compuera lógica esta establecida una salida S= Salida seguido de la compuerta
+	que almacenará (ej)  Sand = Salida And.
 	
 */
 //Definición del módulo y su lista de puertos de Entradas(input) Salidas(output)
