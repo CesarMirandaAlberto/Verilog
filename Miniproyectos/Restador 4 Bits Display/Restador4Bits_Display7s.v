@@ -10,9 +10,9 @@
 		que el resultado ej, entrada X salida = X_Display.
 				** ESTRUCTURA DEL DISEÑO **
 					* DecodificadorBinario_Hexadecimal.v
-					* Medio_Sumador.v
-					* Sumador_Completo.v
-					* Sumador4_Bits.v
+					* Medio_Restador.v
+					* Restador_Completo.v
+					* Restador4Bits_Display7s.v
 */
 
 //Definición del módulo y lista de puertos
