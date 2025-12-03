@@ -22,13 +22,13 @@ module DecodificadorBinario_Hexadecimal(
 	localparam SEIS = 7'b0000010;
 	localparam SIETE = 7'b1111000;
 	localparam OCHO = 7'b0000000;
-	localparam NUEVE = 7'b0010000;
+	localparam NUEVE = 7'b0011000;
 	localparam A = 7'b0001000;
-	localparam B = 7'b1100000;
-	localparam C = 7'b0110001;
-	localparam D = 7'b1000010;
-	localparam E = 7'b0110000;
-	localparam F = 7'b0111000;
+	localparam B = 7'b0000011;
+	localparam C = 7'b1000110;
+	localparam D = 7'b0100001;
+	localparam E = 7'b0000110;
+	localparam F = 7'b0001110;
 	localparam APAGADO = 7'b1111111;
 	
 	//Lista sensitiva con todas las señales
