@@ -1,5 +1,5 @@
 /*
-				**** RESTADOR DE 4 BITS CON DISPLAY 7 SEGMENTOS HEXADECIMAL ****
+				**** TESTBENCH RESTADOR DE 4 BITS CON DISPLAY 7 SEGMENTOS HEXADECIMAL ****
 		
 		El presente código implementa el desarrollo del Testbench del restador de 4 bits 
 		con exhibidor de 7 segmentos, a fin de analizar el funcionamiento del mismo.
