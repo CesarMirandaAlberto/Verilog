@@ -43,10 +43,7 @@ gtkwave Testbench.vcd
 ```
 ### ⚙️  Para automatización de compilado y simulación 💻
 A medida que los diseños se vuelven mas complejos y requieren la instanciación de módulos por lo que es necesario que estos módulos sean compilados previo al compilado del módulo principal por ende los comandos que se implementen serán mas, para automatizar este proceso se incluyen plantilas `.bat` las cuales permitirán ejecutar estos comandos haciendo las modificaciones
-correspondientes.
+correspondientes.En el repositorio 🔗 [FPGA-Scripts-Automatización](https://github.com/CesarMirandaAlberto/FPGA-Scripts-Automatizacion.git) se explican a detalle los casos en que se aplica cada plantilla. <br>
 
 ### ⚠️ Leer readme de cada nivel⚠️
-Dado que varios de los diseños instancian a módulos ya subidos a este repositorio, para evitar subirlos duplicados se desarrollan dos plantillas `.bat` para los siguientes casos.
-+ 1.- Diseños donde tanto el módulo principal como los módulos instanciados se encuentran en la misma carpeta.
-+ 2.- Diseños donde el módulo principal y los módulos instanciados estan en carpetas diferentes.
 En cada nivel se especifica en el readme el tipo de plantilla que se implementó en el desarrollo de los diseños.
