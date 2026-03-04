@@ -47,7 +47,7 @@ module Contador(
 			Limite <= Limite1;
 			FlagTiempo <= 1'b0;
 		end
-		else if(clktickcnt)begin
+		else if(clktickconta)begin
 			// ESTABLECER LIMITES DEL CONTADOR
 			case (Estado)
 				VERDE1 : 	Limite <= Limite1;
