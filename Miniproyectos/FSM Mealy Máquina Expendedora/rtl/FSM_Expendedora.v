@@ -1,3 +1,19 @@
+/*
+					**** FSM MEALY MÁQUINA EXPENDEDORA ****
+					
+	El presente código implementa el diseño del una máquina de estados finitos de tipo mealy para 
+	una máquina expendedora de productos.
+	
+	!! ACERCA DEL CÓDIGO !!
+		* ACTUALIZACIÓN DE ESTADOS : A través de un flip flop d se realiza la actualización de los mismos.
+		* TRANSICIÓN DE ESTADOS : A través de enable se determina cuando la fsm inicie a realizar tranciones acorde 
+		  a las entradas (monedas).
+		* SALIDAS : Dependiendo de los estados se determinan las salidas.
+		* CONTEO DE DINERO : Acorde al estado se asina la cantidad de dinero acumulado.
+*/
+
+
+//DEFINICIÓN DEL MÓDULO Y LISTA DE PUERTOS
 module FSM_Expendedora(
 	input clk,
 	input rst,
@@ -9,6 +25,7 @@ module FSM_Expendedora(
 	output reg [7:0]DAcumulado
 );
 
+	// DEFINICIÓN DE ESTADOS
 	parameter S0 = 3'b000, S5 = 3'b001, S10 = 3'b010, S15 = 3'b011, S20 = 3'b100;
 	
 	parameter [1:0] CINCO = 2'b01;
@@ -27,15 +44,16 @@ module FSM_Expendedora(
 		
 	end 
 	
-	// TRANCISIÓN DE ESTADOS
+	// TRANSICIÓN DE ESTADOS
 	always@(*) begin
+		// ESTADO POR DEFECTO
 		SiguienteEstado = EstadoActual;
 		
 		if(Enable == 1'b0)begin
 			SiguienteEstado = S0;
 		end
 		else begin
-			case(EstadoActual)
+			case(EstadoActual) // EVALUACIÓN DEL ESTADO ACTUAL 
 				S0 : begin
 					if (Moneda == CINCO) begin
 						SiguienteEstado = S5;
@@ -88,30 +106,33 @@ module FSM_Expendedora(
 				default : SiguienteEstado = S0;
 			endcase;
 		end
-	end 
+	end // FIN DE LAS TRANSICIONES
 	
 	//SALIDAS
-	always@(*) begin
+	always@(*) begin 
+		//VALORES POR DEFECTO
 		Cambio = 1'b0;
 		Entrega = 1'b0;
 		
+			//ASIGNACIÓN DE VALORES A LAS SALIDAS ACORDE A LOS ESTADOS
 			case (EstadoActual)
 				S15 : begin
 					if (BComprar) begin
-						Entrega = 1'b1;
+						Entrega = 1'b0;
 					end
 					else begin
-						Entrega = 1'b0;
+						Entrega = 1'b1;
 					end
 				end
 				
 				S20 : begin
 					if (BComprar) begin
-						Entrega = 1'b1;
+						Entrega = 1'b0;
 						Cambio = 1'b0;
 					end
 					else begin
 						Cambio = 1'b1;
+						Entrega = 1'b1;
 					end
 				end
 				
@@ -149,4 +170,4 @@ module FSM_Expendedora(
 		endcase;
 	end
 	
-endmodule
+endmodule //FIN DEL MÓDULO
