@@ -26,4 +26,4 @@ Para que la máquina de estados funcione de manera óptima se requiere el desarr
 * FSM_Expendedora_TB : Implementa el testbench para analizar el funcionamiento general de la máquina de estados.
 
 # ⚠️ 💻! ACERCA DEL TESTBENCH !📈 ⚠️
-Dado que se implementan módulos como presionar boton los valores de los exhibidores en display 7 segmentos no se puede mostrar por completo dado que el tiempo de simulación es muy corto, sin embargo si se quiere visualizar se debe modificar el tiempo de los retardos o su escala de tiempo, sin embargo el tiempo que tardará en generarse la simulación será mayor.
+Dado que se implementan módulos como presionar boton los valores de los exhibidores en display 7 segmentos no se puede mostrar por completo dado que el tiempo de simulación es muy corto, sin embargo si se quiere visualizar se debe modificar el tiempo de los retardos o su escala de tiempo, sin embargo el tiempo que tardará en generarse la simulación será mayor. En el módulo Top y archivo  testbench se indican con comentarios los ajustes necesarios para correr el testbench correctamente.
